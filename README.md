@@ -1,6 +1,3 @@
 # gitskills
-This is A and B
-
-This is A & B
-Creating a new branch is quick AND simple.
+This is a simple discription of git usage.
 
