@@ -4,6 +4,7 @@
 <!-- : change to your own name and email -->
 git config --global user.name 'daixiaozhuan'    
 git config --global user.email 'daixiaozhuan90@gmail.com'
+git config --global color.ui true
 ## 1.2 generate SSH Key
 <!-- press enter all the time -->
 - ssh-keygen -t rsa -C "daixiaozhuan90@gmail.com" 
