@@ -1,4 +1,18 @@
 # Git
+[第一章：git 配置及创建版本库](#第一章git-配置及创建版本库)  
+[1.1 configure your git](#11-configure-your-git)  
+[1.2 generate SSH Key](#12-generate-ssh-key)  
+[1.3 connect local Repo with remote Repo](#13-connect-local-repo-with-remote-repo)  
+[1.4: push file to remote Repo](#14-push-file-to-remote-repo)  
+[1.5 删除远程库](#15-删除远程库即解除本地和远程的绑定关系)  
+[1.6 从远程库克隆](#16-从远程库克隆)  
+[1.7 创建与合并分支](#17-创建与合并分支)  
+[1.8 多人协作](#18-多人协作)  
+[第二章：版本管理](#第二章版本管理)   
+[2.1 版本回退](#21-版本回退)  
+[2.2 工作区和暂存区](#22-工作区和暂存区)  
+[2.3 撤销修改](#23-撤销修改)  
+[2.4 删除文件](#24-删除文件)
 ## 第一章：git 配置及创建版本库
 ## 1.1 configure your git
 <!-- : change to your own name and email -->
@@ -125,7 +139,7 @@ Git的版本回退速度非常快，因为Git在内部有个指向当前版本�
 - 穿梭前，用git log可以查看提交历史，以便确定要回退到哪个版本。
 - 要重返未来，用git reflog查看命令历史，以便确定要回到未来的哪个版本，可以通过commit id来重返未来。
 
-## 2.2 工作区（working directory）和暂存区
+## 2.2 工作区和暂存区
 ### 工作区 (working directory)
 就是你在自己电脑上创建的文件夹，比如新建一个文件夹mywork,那这个文件夹就是一个工作区
 ### 版本库 （Repository）
@@ -153,14 +167,14 @@ git diff 可以查看工作区和版本库中的文件的区别；
 每次修改，如果不用git add到暂存区，那就不会加入到commit中。
 ```
 
-## 撤销修改
+## 2.3 撤销修改
 场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令git checkout -- file。
 
 场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令git reset HEAD <file>，就回到了场景1，第二步按场景1操作 git checkout -- file。
 
 场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退一节，不过前提是没有推送到远程库 git reset --hard commit id。
 
-## 删除文件
+## 2.4 删除文件
 场景1：文件test.txt已经提交到版本库，然后从工作区删除之后，想从版本库也删除，分两步，第一步用git rm test.txt,第二步是git commit,这样就把test.txt文件从版本库删除了。
 
 场景2：另一种情况是删错了，因为版本库里还有呢，所以可以很轻松地把误删的文件恢复到最新版本：git checkout -- test.txt
