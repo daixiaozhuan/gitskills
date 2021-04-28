@@ -16,38 +16,39 @@
 ## 第一章：git 配置及创建版本库
 ## 1.1 configure your git
 <!-- : change to your own name and email -->
-git config --global user.name 'daixiaozhuan'    
-git config --global user.email 'daixiaozhuan90@gmail.com'  
-git config --global color.ui true
+    git config --global user.name 'daixiaozhuan'    
+    git config --global user.email 'daixiaozhuan90@gmail.com'  
+    git config --global color.ui true
 ## 1.2 generate SSH Key
 <!-- press enter all the time -->
-- ssh-keygen -t rsa -C "daixiaozhuan90@gmail.com" 
-- cd ~/.ssh
-- copy id_rsa.pub to github SSH Key
+    ssh-keygen -t rsa -C "daixiaozhuan90@gmail.com" 
+    cd ~/.ssh
+    copy id_rsa.pub to github SSH Key
 ## 1.3 connect local Repo with remote Repo
-##replace your own Repo path  
-git remote add origin http://10.30.10.200:10080/daixiaozhuan/add_newfile.git   
-git remote -v ##查看远程库信息  
-git remote rm origin ##删除远程库
+    ##replace your own Repo path 
+    git init  
+    git remote add origin http://10.30.10.200:10080/daixiaozhuan/add_newfile.git   
+    git remote -v ##查看远程库信息  
+    git remote rm origin ##删除远程库
 ## 1.4: push file to remote Repo
 <!-- git add filename -->
-- git init  
-- git add .  
-- git commit -m 'update'   
-- git push -u origin master（第一次用-u可以把本地的master分支和远程的master 分支关联起来，后面再推送的时候就可以直接是git push origin master）
 
-```
+    git add .  
+    - git commit -m 'update'   
+    - git push -u origin master（第一次用-u可以把本地的master分支和远程的master 分支关联起来，后面再推送的时候就可以直接是git push origin master）
+
+
 If there are errors, you need to pull readme to local Repo, push again after pull
-```
-- git pull --rebase origin master  
-- git push -u origin master
+
+    git pull --rebase origin master  
+    git push -u origin master
   
 ## 1.5 删除远程库（即解除本地和远程的绑定关系）
-git remote -v ##查看远程库信息  
-git remote rm origin ##删除远程库，即解除和本地的绑定关系，并没有真正的物理删除。
+    git remote -v ##查看远程库信息  
+    git remote rm origin ##删除远程库，即解除和本地的绑定关系，并没有真正的物理删除。
 
 ## 1.6 从远程库克隆
-git clone http://10.30.10.200:10080/daixiaozhuan/gitskills.git （后面的地址是远程仓库）
+    git clone http://10.30.10.200:10080/daixiaozhuan/gitskills.git （后面的地址是远程仓库）
 
 ## 小结
 要关联一个远程库，使用命令 **git remote add origin git@server-name:path/repo-name.git**；
