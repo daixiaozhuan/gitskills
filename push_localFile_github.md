@@ -26,8 +26,8 @@ git config --global color.ui true
 - copy id_rsa.pub to github SSH Key
 ## 1.3 connect local Repo with remote Repo
 ##replace your own Repo path  
-git remote add origin http://10.30.10.200:10080/daixiaozhuan/add_newfile.git 
-git remote -v ##查看远程库信息
+git remote add origin http://10.30.10.200:10080/daixiaozhuan/add_newfile.git   
+git remote -v ##查看远程库信息  
 git remote rm origin ##删除远程库
 ## 1.4: push file to remote Repo
 <!-- git add filename -->
@@ -43,7 +43,7 @@ If there are errors, you need to pull readme to local Repo, push again after pul
 - git push -u origin master
   
 ## 1.5 删除远程库（即解除本地和远程的绑定关系）
-git remote -v ##查看远程库信息
+git remote -v ##查看远程库信息  
 git remote rm origin ##删除远程库，即解除和本地的绑定关系，并没有真正的物理删除。
 
 ## 1.6 从远程库克隆
