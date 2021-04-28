@@ -34,8 +34,8 @@
 <!-- git add filename -->
 
     git add .  
-    - git commit -m 'update'   
-    - git push -u origin master（第一次用-u可以把本地的master分支和远程的master 分支关联起来，后面再推送的时候就可以直接是git push origin master）
+    git commit -m 'update'   
+    git push -u origin master（第一次用-u可以把本地的master分支和远程的master 分支关联起来，后面再推送的时候就可以直接是git push origin master）
 
 
 If there are errors, you need to pull readme to local Repo, push again after pull
